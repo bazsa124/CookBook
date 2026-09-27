@@ -1,0 +1,1356 @@
+{
+  "recipes": [
+    {
+      "id": "a",
+      "title": {
+        "hu": "A"
+      },
+      "tags": null,
+      "base_servings": 4,
+      "ingredients": [
+        {
+          "id": "tojas",
+          "qty": 3,
+          "unit_id": "pc",
+          "name": {
+            "hu": "tojás"
+          },
+          "category": "dairy"
+        },
+        {
+          "id": "tojas-2",
+          "qty": 1,
+          "unit_id": "pc",
+          "name": {
+            "hu": "tojás"
+          },
+          "category": "dairy"
+        },
+        {
+          "id": "liszt",
+          "qty": 20,
+          "unit_id": "dkg",
+          "name": {
+            "en": "flour",
+            "hu": "liszt"
+          },
+          "category": "pantry"
+        },
+        {
+          "id": "tej",
+          "qty": 2.5,
+          "unit_id": "dl",
+          "name": {
+            "hu": "tej"
+          },
+          "category": "dairy"
+        },
+        {
+          "id": "so",
+          "qty": null,
+          "name": {
+            "hu": "só"
+          },
+          "category": "spices"
+        },
+        {
+          "id": "bors",
+          "qty": null,
+          "name": {
+            "hu": "bors"
+          },
+          "category": "spices"
+        },
+        {
+          "id": "sajt",
+          "qty": 10,
+          "qty_max": 15,
+          "unit_id": "dkg",
+          "name": {
+            "hu": "sajt"
+          },
+          "category": "dairy"
+        },
+        {
+          "id": "petrezselyem",
+          "qty": 1,
+          "unit_id": "bunch",
+          "name": {
+            "hu": "petrezselyem"
+          },
+          "optional": true
+        },
+        {
+          "id": "fura",
+          "qty": 2,
+          "unit": {
+            "hu": "marék"
+          },
+          "name": {
+            "hu": "fura dolog"
+          },
+          "category": "weird"
+        }
+      ],
+      "steps": null,
+      "rev": 0,
+      "created": "0001-01-01T00:00:00Z",
+      "updated": "0001-01-01T00:00:00Z"
+    },
+    {
+      "id": "b",
+      "title": {
+        "hu": "B"
+      },
+      "tags": null,
+      "base_servings": 2,
+      "ingredients": [
+        {
+          "id": "tojas",
+          "qty": 1,
+          "unit_id": "pc",
+          "name": {
+            "hu": "tojás"
+          }
+        },
+        {
+          "id": "liszt",
+          "qty": 300,
+          "unit_id": "g",
+          "name": {
+            "hu": "liszt"
+          }
+        },
+        {
+          "id": "tej",
+          "qty": 1,
+          "unit_id": "tbsp",
+          "name": {
+            "hu": "tej"
+          }
+        },
+        {
+          "id": "so",
+          "qty": 1,
+          "unit_id": "tsp",
+          "name": {
+            "hu": "só"
+          }
+        },
+        {
+          "id": "sajt",
+          "qty": 1,
+          "unit_id": "pc",
+          "name": {
+            "hu": "sajt"
+          }
+        },
+        {
+          "id": "hagyma",
+          "qty": 1.5,
+          "unit_id": "head",
+          "name": {
+            "hu": "vöröshagyma"
+          }
+        }
+      ],
+      "steps": null,
+      "rev": 0,
+      "created": "0001-01-01T00:00:00Z",
+      "updated": "0001-01-01T00:00:00Z"
+    }
+  ],
+  "units": [
+    {
+      "id": "g",
+      "label": {
+        "en": "g",
+        "hu": "g"
+      },
+      "kind": "mass",
+      "factor": 1,
+      "system": "metric",
+      "aliases": [
+        "gr",
+        "gramm",
+        "gram",
+        "grams"
+      ]
+    },
+    {
+      "id": "dkg",
+      "label": {
+        "en": "dag",
+        "hu": "dkg"
+      },
+      "kind": "mass",
+      "factor": 10,
+      "system": "metric",
+      "aliases": [
+        "dag",
+        "deka",
+        "dekagramm"
+      ]
+    },
+    {
+      "id": "kg",
+      "label": {
+        "en": "kg",
+        "hu": "kg"
+      },
+      "kind": "mass",
+      "factor": 1000,
+      "system": "metric",
+      "aliases": [
+        "kilo",
+        "kilogramm"
+      ]
+    },
+    {
+      "id": "oz",
+      "label": {
+        "en": "oz",
+        "hu": "uncia"
+      },
+      "kind": "mass",
+      "factor": 28.3495,
+      "system": "imperial",
+      "aliases": [
+        "ounce",
+        "ounces"
+      ]
+    },
+    {
+      "id": "lb",
+      "label": {
+        "en": "lb",
+        "hu": "font"
+      },
+      "kind": "mass",
+      "factor": 453.592,
+      "system": "imperial",
+      "aliases": [
+        "lbs",
+        "pound",
+        "pounds"
+      ]
+    },
+    {
+      "id": "ml",
+      "label": {
+        "en": "ml",
+        "hu": "ml"
+      },
+      "kind": "volume",
+      "factor": 1,
+      "system": "metric",
+      "aliases": [
+        "milliliter"
+      ]
+    },
+    {
+      "id": "cl",
+      "label": {
+        "en": "cl",
+        "hu": "cl"
+      },
+      "kind": "volume",
+      "factor": 10,
+      "system": "metric",
+      "aliases": [
+        "centiliter"
+      ]
+    },
+    {
+      "id": "dl",
+      "label": {
+        "en": "dl",
+        "hu": "dl"
+      },
+      "kind": "volume",
+      "factor": 100,
+      "system": "metric",
+      "aliases": [
+        "deciliter"
+      ]
+    },
+    {
+      "id": "l",
+      "label": {
+        "en": "l",
+        "hu": "l"
+      },
+      "kind": "volume",
+      "factor": 1000,
+      "system": "metric",
+      "aliases": [
+        "liter",
+        "litre"
+      ]
+    },
+    {
+      "id": "tsp",
+      "label": {
+        "en": "tsp",
+        "hu": "tk"
+      },
+      "kind": "volume",
+      "factor": 5,
+      "system": "both",
+      "aliases": [
+        "teáskanál",
+        "teaskanal",
+        "teaspoon",
+        "teaspoons",
+        "tk."
+      ]
+    },
+    {
+      "id": "tbsp",
+      "label": {
+        "en": "tbsp",
+        "hu": "ek"
+      },
+      "kind": "volume",
+      "factor": 15,
+      "system": "both",
+      "aliases": [
+        "evőkanál",
+        "evokanal",
+        "tablespoon",
+        "tablespoons",
+        "ek."
+      ]
+    },
+    {
+      "id": "csp",
+      "label": {
+        "en": "coffee spoon",
+        "hu": "kk"
+      },
+      "kind": "volume",
+      "factor": 2.5,
+      "system": "both",
+      "aliases": [
+        "kávéskanál",
+        "kaveskanal",
+        "mokkáskanál",
+        "kk."
+      ]
+    },
+    {
+      "id": "cup",
+      "label": {
+        "en": "cup",
+        "hu": "csésze"
+      },
+      "kind": "volume",
+      "factor": 240,
+      "system": "imperial",
+      "aliases": [
+        "cups",
+        "csesze"
+      ]
+    },
+    {
+      "id": "mug",
+      "label": {
+        "en": "mug",
+        "hu": "bögre"
+      },
+      "kind": "volume",
+      "factor": 250,
+      "system": "both",
+      "aliases": [
+        "bogre",
+        "mugs"
+      ]
+    },
+    {
+      "id": "gal",
+      "label": {
+        "en": "gal",
+        "hu": "gallon"
+      },
+      "kind": "volume",
+      "factor": 3785.41,
+      "system": "imperial",
+      "aliases": [
+        "gallon",
+        "gallons"
+      ]
+    },
+    {
+      "id": "floz",
+      "label": {
+        "en": "fl oz",
+        "hu": "folyékony uncia"
+      },
+      "kind": "volume",
+      "factor": 29.5735,
+      "system": "imperial",
+      "aliases": [
+        "fl. oz",
+        "fluid ounce"
+      ]
+    },
+    {
+      "id": "pc",
+      "label": {
+        "en": "pc",
+        "hu": "db"
+      },
+      "kind": "count",
+      "aliases": [
+        "darab",
+        "pcs",
+        "piece",
+        "pieces",
+        "db."
+      ]
+    },
+    {
+      "id": "clove",
+      "label": {
+        "en": "clove",
+        "hu": "gerezd"
+      },
+      "kind": "count",
+      "aliases": [
+        "cloves"
+      ]
+    },
+    {
+      "id": "head",
+      "label": {
+        "en": "head",
+        "hu": "fej"
+      },
+      "kind": "count",
+      "aliases": [
+        "heads"
+      ]
+    },
+    {
+      "id": "slice",
+      "label": {
+        "en": "slice",
+        "hu": "szelet"
+      },
+      "kind": "count",
+      "aliases": [
+        "slices"
+      ]
+    },
+    {
+      "id": "pinch",
+      "label": {
+        "en": "pinch",
+        "hu": "csipet"
+      },
+      "kind": "count",
+      "aliases": [
+        "pinches"
+      ]
+    },
+    {
+      "id": "bunch",
+      "label": {
+        "en": "bunch",
+        "hu": "csokor"
+      },
+      "kind": "count",
+      "aliases": [
+        "bunches"
+      ]
+    },
+    {
+      "id": "can",
+      "label": {
+        "en": "can",
+        "hu": "doboz"
+      },
+      "kind": "count",
+      "aliases": [
+        "cans",
+        "konzerv"
+      ]
+    },
+    {
+      "id": "pack",
+      "label": {
+        "en": "pack",
+        "hu": "csomag"
+      },
+      "kind": "count",
+      "aliases": [
+        "packs",
+        "packet",
+        "cs.",
+        "zacskó"
+      ]
+    },
+    {
+      "id": "sheet",
+      "label": {
+        "en": "sheet",
+        "hu": "lap"
+      },
+      "kind": "count",
+      "aliases": [
+        "sheets"
+      ]
+    },
+    {
+      "id": "cube",
+      "label": {
+        "en": "cube",
+        "hu": "kocka"
+      },
+      "kind": "count",
+      "aliases": [
+        "cubes"
+      ]
+    },
+    {
+      "id": "handful",
+      "label": {
+        "en": "handful",
+        "hu": "marék"
+      },
+      "kind": "count",
+      "aliases": [
+        "marek"
+      ]
+    },
+    {
+      "id": "drop",
+      "label": {
+        "en": "drop",
+        "hu": "csepp"
+      },
+      "kind": "count",
+      "aliases": [
+        "drops"
+      ]
+    },
+    {
+      "id": "sprig",
+      "label": {
+        "en": "sprig",
+        "hu": "szál"
+      },
+      "kind": "count",
+      "aliases": [
+        "sprigs",
+        "szal"
+      ]
+    },
+    {
+      "id": "leaf",
+      "label": {
+        "en": "leaf",
+        "hu": "levél"
+      },
+      "kind": "count",
+      "aliases": [
+        "leaves"
+      ]
+    },
+    {
+      "id": "shot",
+      "label": {
+        "en": "shot",
+        "hu": "feles"
+      },
+      "kind": "volume",
+      "factor": 40,
+      "system": "both",
+      "aliases": [
+        "shots"
+      ]
+    }
+  ],
+  "aisles": [
+    {
+      "id": "produce",
+      "label": {
+        "en": "Fruit & vegetables",
+        "hu": "Zöldség, gyümölcs"
+      }
+    },
+    {
+      "id": "bakery",
+      "label": {
+        "en": "Bakery",
+        "hu": "Pékáru"
+      }
+    },
+    {
+      "id": "meat",
+      "label": {
+        "en": "Meat & fish",
+        "hu": "Hús, hal"
+      }
+    },
+    {
+      "id": "dairy",
+      "label": {
+        "en": "Dairy & eggs",
+        "hu": "Tejtermék, tojás"
+      }
+    },
+    {
+      "id": "pantry",
+      "label": {
+        "en": "Pantry",
+        "hu": "Szárazáru"
+      }
+    },
+    {
+      "id": "canned",
+      "label": {
+        "en": "Canned & jarred",
+        "hu": "Konzerv"
+      }
+    },
+    {
+      "id": "spices",
+      "label": {
+        "en": "Spices & condiments",
+        "hu": "Fűszerek, szószok"
+      }
+    },
+    {
+      "id": "frozen",
+      "label": {
+        "en": "Frozen",
+        "hu": "Fagyasztott"
+      }
+    },
+    {
+      "id": "drinks",
+      "label": {
+        "en": "Drinks",
+        "hu": "Italok"
+      }
+    },
+    {
+      "id": "household",
+      "label": {
+        "en": "Household",
+        "hu": "Háztartás"
+      }
+    },
+    {
+      "id": "other",
+      "label": {
+        "en": "Other",
+        "hu": "Egyéb"
+      }
+    }
+  ],
+  "aisle_keywords": [
+    {
+      "aisle": "household",
+      "words": [
+        "szemeteszsak",
+        "trash_bag",
+        "bin_bag",
+        "wc_papir",
+        "toilet_paper",
+        "papirtorlo",
+        "paper_towel",
+        "mosogatoszer",
+        "dish_soap",
+        "mososzer",
+        "detergent",
+        "alufolia",
+        "foil",
+        "folia",
+        "szalveta",
+        "napkin",
+        "szivacs",
+        "sponge",
+        "elem",
+        "battery"
+      ]
+    },
+    {
+      "aisle": "canned",
+      "words": [
+        "konzerv",
+        "canned",
+        "kukorica",
+        "corn",
+        "passata",
+        "paradicsomsuritmeny",
+        "tomato_paste",
+        "sweetcorn"
+      ]
+    },
+    {
+      "aisle": "pantry",
+      "words": [
+        "kokusztej",
+        "coconut_milk",
+        "liszt",
+        "flour",
+        "cukor",
+        "sugar",
+        "tarhonya",
+        "teszta",
+        "pasta",
+        "rizs",
+        "rice",
+        "zsemlemorzsa",
+        "breadcrumb",
+        "sutopor",
+        "baking_powder",
+        "szodabikarbona",
+        "soda",
+        "eleszto",
+        "yeast",
+        "olaj",
+        "oil",
+        "ecet",
+        "vinegar",
+        "mez",
+        "honey",
+        "kakao",
+        "cocoa",
+        "csokolade",
+        "chocolate",
+        "nutella",
+        "zabpehely",
+        "oat",
+        "mak",
+        "poppy",
+        "szezam",
+        "sesame",
+        "tokmag",
+        "pumpkin_seed",
+        "napraforgo",
+        "sunflower",
+        "len",
+        "flax",
+        "dio",
+        "walnut",
+        "mogyoro",
+        "hazelnut",
+        "mandula",
+        "almond",
+        "vanilia",
+        "vanilla",
+        "leveles_teszta",
+        "puff_pastry",
+        "alaple",
+        "stock",
+        "broth",
+        "keksz",
+        "biscuit",
+        "puding",
+        "pudding",
+        "zselatin",
+        "gelatin",
+        "szirup",
+        "syrup",
+        "karamell",
+        "caramel",
+        "marshmallow"
+      ]
+    },
+    {
+      "aisle": "spices",
+      "words": [
+        "so",
+        "salt",
+        "bors",
+        "pepper",
+        "paprikapor",
+        "pirospaprika",
+        "paprika_powder",
+        "fahej",
+        "cinnamon",
+        "komeny",
+        "cumin",
+        "caraway",
+        "oregano",
+        "bazsalikom",
+        "basil",
+        "kakukkfu",
+        "thyme",
+        "rozmaring",
+        "rosemary",
+        "szerecsendio",
+        "nutmeg",
+        "gyomber",
+        "ginger",
+        "chili",
+        "curry",
+        "mustar",
+        "mustard",
+        "ketchup",
+        "majonez",
+        "mayo",
+        "szojaszosz",
+        "soy",
+        "fuszer",
+        "spice",
+        "babérlevel",
+        "baberlevel",
+        "bay",
+        "szegfuszeg",
+        "clove_spice",
+        "kurkuma",
+        "turmeric",
+        "tabasco",
+        "worcester",
+        "sriracha",
+        "pesto",
+        "salsa"
+      ]
+    },
+    {
+      "aisle": "dairy",
+      "words": [
+        "tojas",
+        "egg",
+        "tej",
+        "milk",
+        "tejfol",
+        "sour_cream",
+        "tejszin",
+        "cream",
+        "vaj",
+        "butter",
+        "sajt",
+        "cheese",
+        "parmezan",
+        "parmesan",
+        "mozzarella",
+        "turo",
+        "cottage",
+        "quark",
+        "joghurt",
+        "yogurt",
+        "juhturo",
+        "kremsajt",
+        "cream_cheese",
+        "mascarpone",
+        "feta",
+        "margarin",
+        "margarine"
+      ]
+    },
+    {
+      "aisle": "meat",
+      "words": [
+        "csirke",
+        "chicken",
+        "marha",
+        "beef",
+        "sertes",
+        "pork",
+        "bacon",
+        "sonka",
+        "ham",
+        "kolbasz",
+        "sausage",
+        "szalami",
+        "salami",
+        "parizsi",
+        "bologna",
+        "virsli",
+        "hot_dog",
+        "daralt",
+        "minced",
+        "ground",
+        "zuza",
+        "gizzard",
+        "maj",
+        "liver",
+        "pulyka",
+        "turkey",
+        "kacsa",
+        "duck",
+        "hal",
+        "fish",
+        "lazac",
+        "salmon",
+        "tonhal",
+        "tuna",
+        "garnela",
+        "shrimp",
+        "comb",
+        "thigh",
+        "mell",
+        "breast",
+        "labszar",
+        "shank",
+        "karaj",
+        "loin",
+        "tarja",
+        "szalonna",
+        "husz",
+        "hus",
+        "meat"
+      ]
+    },
+    {
+      "aisle": "produce",
+      "words": [
+        "hagyma",
+        "onion",
+        "fokhagyma",
+        "garlic",
+        "burgonya",
+        "krumpli",
+        "potato",
+        "paradicsom",
+        "tomato",
+        "paprika",
+        "bell_pepper",
+        "repa",
+        "carrot",
+        "zeller",
+        "celery",
+        "petrezselyem",
+        "parsley",
+        "kapor",
+        "dill",
+        "snidling",
+        "metelohagyma",
+        "chive",
+        "gomba",
+        "mushroom",
+        "karfiol",
+        "cauliflower",
+        "brokkoli",
+        "broccoli",
+        "kaposzta",
+        "cabbage",
+        "cukkini",
+        "zucchini",
+        "padlizsan",
+        "eggplant",
+        "uborka",
+        "cucumber",
+        "salata",
+        "lettuce",
+        "spenot",
+        "spinach",
+        "tok",
+        "pumpkin",
+        "alma",
+        "apple",
+        "korte",
+        "pear",
+        "citrom",
+        "lemon",
+        "lime",
+        "narancs",
+        "orange",
+        "banan",
+        "banana",
+        "eper",
+        "strawberry",
+        "malna",
+        "raspberry",
+        "afonya",
+        "blueberry",
+        "szolo",
+        "grape",
+        "menta",
+        "mint",
+        "avokado",
+        "avocado",
+        "koriander",
+        "cilantro",
+        "rukkola",
+        "arugula",
+        "retek",
+        "radish",
+        "borso",
+        "pea",
+        "bab",
+        "bean"
+      ]
+    },
+    {
+      "aisle": "bakery",
+      "words": [
+        "kenyer",
+        "bread",
+        "zsemle",
+        "roll",
+        "kifli",
+        "croissant",
+        "bagett",
+        "baguette",
+        "tortilla",
+        "pita",
+        "kalacs",
+        "brioche"
+      ]
+    },
+    {
+      "aisle": "frozen",
+      "words": [
+        "fagyasztott",
+        "frozen",
+        "jegkrem",
+        "ice_cream",
+        "jeg",
+        "ice"
+      ]
+    },
+    {
+      "aisle": "drinks",
+      "words": [
+        "bor",
+        "feherbor",
+        "vorosbor",
+        "wine",
+        "sor",
+        "beer",
+        "vodka",
+        "rum",
+        "gin",
+        "whisky",
+        "tequila",
+        "likor",
+        "liqueur",
+        "palinka",
+        "brandy",
+        "pezsgo",
+        "champagne",
+        "prosecco",
+        "szoda",
+        "soda_water",
+        "tonic",
+        "cola",
+        "ust",
+        "juice",
+        "le_",
+        "gyumolcsle",
+        "kave",
+        "coffee",
+        "tea",
+        "limonade",
+        "sprite",
+        "energiaital",
+        "grenadine",
+        "gyomber_sor",
+        "ginger_beer",
+        "ginger_ale"
+      ]
+    }
+  ],
+  "state": {
+    "rev": 7,
+    "recipes": [
+      {
+        "id": "a",
+        "servings": 6
+      },
+      {
+        "id": "b",
+        "servings": 4
+      },
+      {
+        "id": "gone",
+        "servings": 2
+      }
+    ],
+    "static": [
+      {
+        "id": "s1",
+        "text": "Szemeteszsák",
+        "category": "household",
+        "checked": false
+      },
+      {
+        "id": "s2",
+        "text": "Kenyér",
+        "category": "bakery",
+        "checked": true
+      },
+      {
+        "id": "s3",
+        "text": "Valami",
+        "category": "",
+        "checked": false
+      }
+    ],
+    "checked": [
+      "tojas|unit:pc",
+      "stale|key"
+    ]
+  },
+  "expected": {
+    "rev": 7,
+    "recipes": [
+      {
+        "id": "a",
+        "title": {
+          "hu": "A"
+        },
+        "servings": 6
+      },
+      {
+        "id": "b",
+        "title": {
+          "hu": "B"
+        },
+        "servings": 4
+      },
+      {
+        "id": "gone",
+        "title": null,
+        "servings": 2,
+        "missing": true
+      }
+    ],
+    "sections": [
+      {
+        "category": "produce",
+        "label": {
+          "en": "Fruit & vegetables",
+          "hu": "Zöldség, gyümölcs"
+        },
+        "lines": [
+          {
+            "key": "hagyma|unit:head",
+            "ingredient_id": "hagyma",
+            "name": {
+              "hu": "vöröshagyma"
+            },
+            "category": "produce",
+            "qty": 3,
+            "unit_id": "head",
+            "sources": [
+              "b"
+            ],
+            "checked": false
+          }
+        ],
+        "static": []
+      },
+      {
+        "category": "bakery",
+        "label": {
+          "en": "Bakery",
+          "hu": "Pékáru"
+        },
+        "lines": [],
+        "static": [
+          {
+            "id": "s2",
+            "text": "Kenyér",
+            "category": "bakery",
+            "checked": true
+          }
+        ]
+      },
+      {
+        "category": "dairy",
+        "label": {
+          "en": "Dairy & eggs",
+          "hu": "Tejtermék, tojás"
+        },
+        "lines": [
+          {
+            "key": "sajt|kind:mass",
+            "ingredient_id": "sajt",
+            "name": {
+              "hu": "sajt"
+            },
+            "category": "dairy",
+            "qty": 22.5,
+            "unit_id": "dkg",
+            "sources": [
+              "a"
+            ],
+            "checked": false
+          },
+          {
+            "key": "sajt|unit:pc",
+            "ingredient_id": "sajt",
+            "name": {
+              "hu": "sajt"
+            },
+            "category": "dairy",
+            "qty": 2,
+            "unit_id": "pc",
+            "sources": [
+              "b"
+            ],
+            "checked": false
+          },
+          {
+            "key": "tej|kind:volume",
+            "ingredient_id": "tej",
+            "name": {
+              "hu": "tej"
+            },
+            "category": "dairy",
+            "qty": 4.05,
+            "unit_id": "dl",
+            "unit": {
+              "en": "dl",
+              "hu": "dl"
+            },
+            "sources": [
+              "a",
+              "b"
+            ],
+            "checked": false
+          },
+          {
+            "key": "tojas|unit:pc",
+            "ingredient_id": "tojas",
+            "name": {
+              "hu": "tojás"
+            },
+            "category": "dairy",
+            "qty": 8,
+            "unit_id": "pc",
+            "sources": [
+              "a",
+              "b"
+            ],
+            "checked": true
+          }
+        ],
+        "static": []
+      },
+      {
+        "category": "pantry",
+        "label": {
+          "en": "Pantry",
+          "hu": "Szárazáru"
+        },
+        "lines": [
+          {
+            "key": "liszt|kind:mass",
+            "ingredient_id": "liszt",
+            "name": {
+              "en": "flour",
+              "hu": "liszt"
+            },
+            "category": "pantry",
+            "qty": 900,
+            "unit_id": "g",
+            "unit": {
+              "en": "g",
+              "hu": "g"
+            },
+            "sources": [
+              "a",
+              "b"
+            ],
+            "checked": false
+          }
+        ],
+        "static": []
+      },
+      {
+        "category": "spices",
+        "label": {
+          "en": "Spices & condiments",
+          "hu": "Fűszerek, szószok"
+        },
+        "lines": [
+          {
+            "key": "bors|taste",
+            "ingredient_id": "bors",
+            "name": {
+              "hu": "bors"
+            },
+            "category": "spices",
+            "qty": null,
+            "sources": [
+              "a"
+            ],
+            "checked": false
+          },
+          {
+            "key": "so|kind:volume",
+            "ingredient_id": "so",
+            "name": {
+              "hu": "só"
+            },
+            "category": "spices",
+            "qty": 2,
+            "unit_id": "tsp",
+            "sources": [
+              "b"
+            ],
+            "checked": false
+          }
+        ],
+        "static": []
+      },
+      {
+        "category": "household",
+        "label": {
+          "en": "Household",
+          "hu": "Háztartás"
+        },
+        "lines": [],
+        "static": [
+          {
+            "id": "s1",
+            "text": "Szemeteszsák",
+            "category": "household",
+            "checked": false
+          }
+        ]
+      },
+      {
+        "category": "other",
+        "label": {
+          "en": "Other",
+          "hu": "Egyéb"
+        },
+        "lines": [],
+        "static": [
+          {
+            "id": "s3",
+            "text": "Valami",
+            "category": "",
+            "checked": false
+          }
+        ]
+      },
+      {
+        "category": "weird",
+        "label": {
+          "en": "weird",
+          "hu": "weird"
+        },
+        "lines": [
+          {
+            "key": "fura|label:marék",
+            "ingredient_id": "fura",
+            "name": {
+              "hu": "fura dolog"
+            },
+            "category": "weird",
+            "qty": 3,
+            "unit": {
+              "hu": "marék"
+            },
+            "sources": [
+              "a"
+            ],
+            "checked": false
+          }
+        ],
+        "static": []
+      }
+    ],
+    "state": null
+  }
+}

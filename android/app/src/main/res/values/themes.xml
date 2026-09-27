@@ -1,0 +1,5 @@
+<resources>
+    <style name="Theme.CookBook" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">#FFFBF7</item>
+    </style>
+</resources>

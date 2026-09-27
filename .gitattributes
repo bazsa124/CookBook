@@ -1,0 +1,8 @@
+# Normalise to LF in the repository; shell scripts must stay LF on every
+# checkout or they break on the Linux host.
+* text=auto eol=lf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+*.jar binary
+*.png binary
+*.jpg binary
