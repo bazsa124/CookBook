@@ -7,6 +7,7 @@ import (
 	"net/http/httptest"
 	"strings"
 	"testing"
+	"time"
 
 	"cookbook/internal/scrape"
 )
@@ -112,5 +113,50 @@ func TestParseConfig(t *testing.T) {
 	}
 	if _, err := ParseConfig([]byte(`{"sources":[{"name":"x","kind":"rss","include":"("}]}`)); err == nil {
 		t.Error("bad regexp accepted")
+	}
+}
+
+func TestScheduleIsDue(t *testing.T) {
+	cfg := Config{Enabled: true, IntervalHours: 24}
+	r := NewRunner(t.TempDir(), cfg, scrape.NewFetcher(), nil, nil)
+	now := time.Now()
+	if !r.due(now) {
+		t.Error("a fresh install (never run) is not due")
+	}
+	r.st.LastRun = now
+	if r.due(now.Add(time.Hour)) {
+		t.Error("due an hour after the last run")
+	}
+	if !r.due(now.Add(24 * time.Hour)) {
+		t.Error("not due after the interval")
+	}
+	r.cfg.Enabled = false
+	if r.due(now.Add(48 * time.Hour)) {
+		t.Error("due while disabled")
+	}
+}
+
+// The loop must start the first run on its own on a fresh install, without
+// anyone pressing Run now.
+func TestLoopRunsOnAFreshInstall(t *testing.T) {
+	site := fakeSite(t)
+	defer site.Close()
+	f := scrape.NewFetcher()
+	f.MinDelay = 0
+	saved := make(chan string, 10)
+	save := func(_ context.Context, d *scrape.Draft, _ string) (string, error) {
+		saved <- d.Recipe.Title["en"]
+		return "id", nil
+	}
+	cfg := Config{Enabled: true, IntervalHours: 24, PerSource: 1,
+		Sources: []Source{{Name: "fake", Kind: "rss", Enabled: true, URL: site.URL + "/feed"}}}
+	r := NewRunner(t.TempDir(), cfg, f, save, func(string) (string, bool) { return "", false })
+	ctx, cancel := context.WithCancel(context.Background())
+	defer cancel()
+	go r.Loop(ctx, 0)
+	select {
+	case <-saved:
+	case <-time.After(10 * time.Second):
+		t.Fatal("the schedule never started the first run")
 	}
 }

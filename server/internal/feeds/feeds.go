@@ -179,7 +179,7 @@ func (r *Runner) Status() Status {
 		st.Sources[k] = v
 	}
 	if r.cfg.Enabled {
-		st.NextRun = r.nextRun()
+		st.NextRun = r.nextRun(time.Now())
 	}
 	for u, s := range r.st.Seen {
 		st.Recent = append(st.Recent, Recent{u, s})
@@ -191,11 +191,21 @@ func (r *Runner) Status() Status {
 	return st
 }
 
-func (r *Runner) nextRun() time.Time {
+// nextRun is when the next scheduled run is due: now, if there has never
+// been one. The caller passes now, so a "due now" answer can't drift past it.
+func (r *Runner) nextRun(now time.Time) time.Time {
 	if r.st.LastRun.IsZero() {
-		return time.Now()
+		return now
 	}
 	return r.st.LastRun.Add(time.Duration(r.cfg.IntervalHours) * time.Hour)
+}
+
+// due reports whether a scheduled run should start at now. It reads the clock
+// once: comparing time.Now() against a nextRun() that itself returned a later
+// time.Now() made a fresh install never due, so the schedule never started.
+// The caller holds r.mu.
+func (r *Runner) due(now time.Time) bool {
+	return r.cfg.Enabled && !now.Before(r.nextRun(now))
 }
 
 // --- running -----------------------------------------------------------------------
@@ -214,7 +224,7 @@ func (r *Runner) Loop(ctx context.Context, firstDelay time.Duration) {
 		case <-t.C:
 		}
 		r.mu.Lock()
-		due := r.cfg.Enabled && !time.Now().Before(r.nextRun())
+		due := r.due(time.Now())
 		r.mu.Unlock()
 		if due {
 			if err := r.Run(ctx); err != nil && !errors.Is(err, ErrBusy) {
